@@ -1,5 +1,8 @@
 package Array_ProblemSolving;
 
+import static java.util.Arrays.copyOf;
+import static java.util.Arrays.sort;
+
 public class part1 {
 //    static double getAvg(int[] arr){
 //        int sum = 0;
@@ -62,8 +65,64 @@ public class part1 {
 //        return naughtyEle;
 //    }
 
+//    static int[] swapEle(int[] arr){
+//        for (int i = 0; i < arr.length - 1; i += 2){
+//            int temp = arr[i];//store 2 in temp
+//            arr[i] = arr[i + 1];//put the next ele in the current ele position
+//            arr[i + 1] = temp;//put the stored ele in the next position
+//        }
+//        return arr;
+//    }
+
+//    static int[] findCommons(int[] arr, int[] arr2){
+//        int[] comArr = new int[Math.min(arr.length, arr2.length)];
+//        int count = 0;
+//        for (int i = 0; i < arr.length; i++){
+//            for (int j = 0; j < arr2.length; j++){
+//                if (arr[i] == arr2[j]){
+//                    comArr[count] = arr[i];
+//                    count++;
+//                    break;
+//                }
+//            }
+//        }
+//        return copyOf(comArr, count);
+//    }
+
+//    static int[] towSum(int[] nums, int target) {
+//        int[] total = new int[2];
+//        for (int i = 0; i < nums.length; i++) {
+//            for (int j = i + 1; j < nums.length; j++) {
+//                if (nums[i] + nums[j] == target) {
+//                    total[0] = i;
+//                    total[1] = j;
+//                }
+//            }
+//        }
+//        return total;
+//    }
+
+
+
+
+
     public static void main(String[] args) {
+//        int[] nums = {3,2,3};
+//        int target = 6;
+//        int[] ans = towSum(nums, target);
+//        for(int i : ans){
+//            System.out.println(i);
+//        }
 //        int[] arr = {2,3,9,5,13};
+//        int[] arr2 = {1,2,3,4,5};
+//        int[] ans = findCommons(arr, arr2);
+//        for (int i : ans){
+//            System.out.println(i);
+//        }
+//        int[] ans = swapEle(arr);
+//        for (int i : ans){
+//            System.out.println(i);
+//        }
 //        System.out.println(findUnsortedEle(arr));
 //        int[] arr = {2, 4, 1, 3, 6, 7};
 //        sumOfEvenOdd(arr);
@@ -75,5 +134,5 @@ public class part1 {
 //        for (int i : ans){
 //            System.out.println(i);
 //        }
-    }
+        }
 }
