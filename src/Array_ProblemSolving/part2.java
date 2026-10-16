@@ -1,7 +1,6 @@
 package Array_ProblemSolving;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class part2 {
 
@@ -56,34 +55,83 @@ public class part2 {
 //        }
 //    }
 
-//    static void mod(int[] arr){
-//        HashMap<Integer, Integer> frequency = new HashMap<>();
-//
+//    static void shiftByK(int[] arr, int k){
+//        int n = arr.length;
+//        int[] temp = new int[k];
+//        int tempIndex = 0;
+//        for (int i = n - k; i < n; i++){
+//            temp[tempIndex] = arr[i];
+//            tempIndex++;
+//        }
+//        for (int i = n - k - 1; i >= 0; i--){
+//            arr[i + k] = arr[i];
+//        }
+//        tempIndex = 0;
+//        for (int i = 0; i <= n - k; i++){
+//            arr[i] = temp[tempIndex];
+//            tempIndex++;
+//        }
+//        printArr(arr);
 //    }
-    static void shiftByK(int[] arr, int k){
-        int n = arr.length;
-        int[] temp = new int[k];
-        int tempIndex = 0;
-        for (int i = n - k; i < n; i++){
-            temp[tempIndex] = arr[i];
-            tempIndex++;
+
+//    static int mode(int[] arr){
+//        HashMap<Integer, Integer> freq = new HashMap<>();
+//        for (int num : arr){
+//            freq.put(num, freq.getOrDefault(num, 0) + 1);
+//        }
+//
+//        for (int i : freq.keySet()){
+//            System.out.println(i + " -> " + freq.get(i));
+//        }
+//
+//        int maxFreq = 0;
+//        int maxFreqKey = 0;
+//        for (int key : freq.keySet()){
+//            int currentKey = key;
+//            int currentKeyFreq = freq.get(key);
+//            if (currentKeyFreq > maxFreq){
+//                maxFreq = currentKeyFreq;
+//                maxFreqKey = currentKey;
+//            }
+//        }
+//        return maxFreqKey;
+//    }
+
+    static int[] findHFreqAndLowestFreq(int[] arr){
+        HashMap<Integer,  Integer> freq = new HashMap<>();
+        for (int num : arr){
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
-        for (int i = n - k - 1; i >= 0; i--){
-            arr[i + k] = arr[i];
+        for (int i : freq.keySet()){
+            System.out.println(i + " -> " + freq.get(i));
         }
-        tempIndex = 0;
-        for (int i = 0; i <= n - k; i++){
-            arr[i] = temp[tempIndex];
-            tempIndex++;
+        int maxFreq = 0;
+        int maxFreqsKey = 0;
+        for (int key : freq.keySet()){
+            int currentFreq = freq.get(key);
+            if (currentFreq > maxFreq){
+                maxFreq = currentFreq;
+                maxFreqsKey = key;
+            }
         }
-        printArr(arr);
+        int lowFreq = Integer.MAX_VALUE;
+        int lowFreqsKey = 0;
+        for (int key : freq.keySet()){
+            int currentFreq = freq.get(key);
+            if (currentFreq < lowFreq){
+                lowFreq = currentFreq;
+                lowFreqsKey = key;
+            }
+        }
+        return new int[] {maxFreqsKey, lowFreqsKey};
     }
 
-
     public static void main(String[] args){
-        int[] arr = {2,4,6,8,9};
-        shiftByK(arr, 3);
-//        mod(arr);
+        int[] arr = {5,2,3,2,3,9,2,5};
+        printArr(findHFreqAndLowestFreq(arr));
+//        System.out.print(mode(arr));
+//        int[] arr = {2,4,6,8,9};
+//        shiftByK(arr, 3);
 //        printAlternate(arr);
 //        shiftBy1(arr);
 //        reversArr(arr);
