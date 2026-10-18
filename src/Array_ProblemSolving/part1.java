@@ -114,6 +114,7 @@ public class part1 {
 //            System.out.println(i);
 //        }
 //        int[] arr = {2,3,9,5,13};
+//        int[] arr = {2,1,5,9,0,6};
 //        int[] arr2 = {1,2,3,4,5};
 //        int[] ans = findCommons(arr, arr2);
 //        for (int i : ans){

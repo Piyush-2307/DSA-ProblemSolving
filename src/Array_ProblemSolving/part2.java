@@ -97,38 +97,44 @@ public class part2 {
 //        return maxFreqKey;
 //    }
 
-    static int[] findHFreqAndLowestFreq(int[] arr){
-        HashMap<Integer,  Integer> freq = new HashMap<>();
-        for (int num : arr){
-            freq.put(num, freq.getOrDefault(num, 0) + 1);
-        }
-        for (int i : freq.keySet()){
-            System.out.println(i + " -> " + freq.get(i));
-        }
-        int maxFreq = 0;
-        int maxFreqsKey = 0;
-        for (int key : freq.keySet()){
-            int currentFreq = freq.get(key);
-            if (currentFreq > maxFreq){
-                maxFreq = currentFreq;
-                maxFreqsKey = key;
-            }
-        }
-        int lowFreq = Integer.MAX_VALUE;
-        int lowFreqsKey = 0;
-        for (int key : freq.keySet()){
-            int currentFreq = freq.get(key);
-            if (currentFreq < lowFreq){
-                lowFreq = currentFreq;
-                lowFreqsKey = key;
-            }
-        }
-        return new int[] {maxFreqsKey, lowFreqsKey};
+//    static int[] findHFreqAndLowestFreq(int[] arr){
+//        HashMap<Integer,  Integer> freq = new HashMap<>();
+//        for (int num : arr){
+//            freq.put(num, freq.getOrDefault(num, 0) + 1);
+//        }
+//        for (int i : freq.keySet()){
+//            System.out.println(i + " -> " + freq.get(i));
+//        }
+//        int maxFreq = 0;
+//        int maxFreqsKey = 0;
+//        for (int key : freq.keySet()){
+//            int currentFreq = freq.get(key);
+//            if (currentFreq > maxFreq){
+//                maxFreq = currentFreq;
+//                maxFreqsKey = key;
+//            }
+//        }
+//        int lowFreq = Integer.MAX_VALUE;
+//        int lowFreqsKey = 0;
+//        for (int key : freq.keySet()){
+//            int currentFreq = freq.get(key);
+//            if (currentFreq < lowFreq){
+//                lowFreq = currentFreq;
+//                lowFreqsKey = key;
+//            }
+//        }
+//        return new int[] {maxFreqsKey, lowFreqsKey};
+//    }
+
+    static void union(int[] arr, int[] arr2){
+
     }
 
     public static void main(String[] args){
-        int[] arr = {5,2,3,2,3,9,2,5};
-        printArr(findHFreqAndLowestFreq(arr));
+        int[] arr = {1,2,3,4,5};
+        int[] arr2 = {2,5,6,7};
+//        int[] arr = {5,2,3,2,3,9,2,5};
+//        printArr(findHFreqAndLowestFreq(arr));
 //        System.out.print(mode(arr));
 //        int[] arr = {2,4,6,8,9};
 //        shiftByK(arr, 3);
