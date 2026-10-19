@@ -1,6 +1,8 @@
 package Array_ProblemSolving;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class part2 {
 
@@ -126,13 +128,21 @@ public class part2 {
 //        return new int[] {maxFreqsKey, lowFreqsKey};
 //    }
 
-    static void union(int[] arr, int[] arr2){
-
-    }
+//    static Set<Integer> union(int[] arr, int[] arr2){
+//        Set<Integer> comArr = new HashSet<>();
+//        for (int i : arr){
+//            comArr.add(i);
+//        }
+//        for (int i : arr2){
+//            comArr.add(i);
+//        }
+//        return comArr;
+//    }
 
     public static void main(String[] args){
-        int[] arr = {1,2,3,4,5};
-        int[] arr2 = {2,5,6,7};
+//        int[] arr = {1,2,3,4,5};
+//        int[] arr2 = {2,5,6,7};
+//        System.out.print(union(arr, arr2));
 //        int[] arr = {5,2,3,2,3,9,2,5};
 //        printArr(findHFreqAndLowestFreq(arr));
 //        System.out.print(mode(arr));
